@@ -10,7 +10,7 @@ RUN apt update && apt install -y \
     iptables \
     && mkdir /var/run/sshd
 
-RUN useradd -m trthaodev && echo "trthaodev:thaodev@" | chpasswd && adduser trthaodev sudo
+RUN useradd -m trthaodev && echo "admin:123456@" | chpasswd && adduser trthaodev sudo
 
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config && \
     echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config && \
